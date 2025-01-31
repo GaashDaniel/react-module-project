@@ -22,7 +22,7 @@ function ThemeSwitcher() {
     }, [theme]);
 
     return (
-        <button className='btn theme-switcher' onClick={toggleTheme} title='Theme Switcher' >
+        <button className='btn theme-switcher' onClick={toggleTheme} title='Switch Theme' >
             <FontAwesomeIcon icon={theme === 'dark' ? faMoon : faSun} />
         </button>
     );
