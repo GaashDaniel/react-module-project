@@ -6,12 +6,19 @@ The app includes an advanced permission system, ensuring that each user accesses
 
 ## Key Features
 ✅ **Business Card Management** - Create, edit, delete, and mark favorite business cards.
+
 ✅ **User Permissions System** - Three user levels: Guest, Regular, Business.
+
 ✅ **Dynamic Search Interface** - Easily find business cards with smart search.
+
 ✅ **Dark Mode Support** - Switch display modes with one click.
+
 ✅ **Advanced Form Validation** - Using Formik and Yup for data integrity.
+
 ✅ **Secure User Authentication with JWT** - Manage permissions via JSON Web Token.
+
 ✅ **Responsive Interface** - Designed for various screen sizes.
+
 ✅ **React Router Integration** - Smooth navigation between pages.
 
 ## Technologies Used
