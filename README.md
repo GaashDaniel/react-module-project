@@ -73,5 +73,5 @@ EasyBusi/
 ```
 
 ## Credits
-- Developed by [**Gaash Web Solutions**](https://gaashdaniel.github.io/Gaash-Web-Solutions/), as part of an advanced React project for a full-stack development course.
+- Developed by [Gaash Web Solutions](https://gaashdaniel.github.io/Gaash-Web-Solutions/), as part of an advanced React project for a full-stack development course.
 - Built with **React, Vite, and Bootstrap**.
