@@ -1,0 +1,30 @@
+export default {
+    _id: null,
+    name: {
+        first: "guest",
+        middle: "",
+        last: "",
+        _id: null,
+    },
+    phone: null,
+    email: null,
+    image: {
+        url: null,
+        alt: null,
+        _id: null,
+    },
+    address: {
+        state: null,
+        country: null,
+        city: null,
+        street: null,
+        houseNumber: null,
+        zip: null,
+        _id: null,
+    },
+    isAdmin: false,
+    isBusiness: false,
+    classCode: null,
+    createdAt: null,
+    loggedIn: false,
+};

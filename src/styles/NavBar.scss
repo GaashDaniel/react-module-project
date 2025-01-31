@@ -1,0 +1,21 @@
+.nav-bar-wrapper {
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: var(--optimal-page-width);
+        max-width: none; //bootstrap override for container
+
+        .navbar-brand {
+            flex-grow: 1;
+        }
+
+        .dropdown-item {
+            padding-inline-start: 1em;
+        }
+    }
+
+    input {
+        margin-inline: auto;
+    }
+}

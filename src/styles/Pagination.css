@@ -1,0 +1,22 @@
+.my-pagination {
+  text-align: center;
+  margin-block: 1rem;
+}
+.my-pagination a {
+  display: inline-grid;
+  place-items: center;
+  width: 4ch;
+  aspect-ratio: 1/1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: inherit;
+}
+.my-pagination a:not([href]) {
+  cursor: default;
+  opacity: 0.4;
+}
+.my-pagination .current-page {
+  font-weight: bold;
+  border-radius: 1ch;
+  background-color: light-dark(#91c5f9, #0073e6);
+}/*# sourceMappingURL=Pagination.css.map */

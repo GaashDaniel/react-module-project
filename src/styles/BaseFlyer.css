@@ -1,0 +1,62 @@
+.base-flyer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  align-self: center;
+  padding: 2rem;
+  --overlay-color: light-dark(#fff9, #0009);
+  background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--background-image);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+}
+.base-flyer h1,
+.base-flyer h2,
+.base-flyer .description {
+  align-self: center;
+}
+.base-flyer .details-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: stretch;
+  gap: 2rem;
+}
+.base-flyer .details-container .google-map {
+  height: 360px;
+  border-radius: 1rem;
+}
+.base-flyer .likes {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-inline-start: auto;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  background-color: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding-inline-start: 0.5lh;
+  border: none;
+  border-radius: 0;
+  border-end-start-radius: 1rem;
+}
+.base-flyer .actions {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+.base-flyer .actions .card-id {
+  display: inline-block;
+  margin-inline-end: auto;
+}
+.base-flyer .actions .btn:not(:hover) {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}/*# sourceMappingURL=BaseFlyer.css.map */

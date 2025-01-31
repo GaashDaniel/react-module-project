@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --component-background: light-dark(#ffffff, #3d3f4d);
+    background-color: light-dark(#e9e9f3, #26272e);
+    color: CanvasText;
+    font-family: 'Assistant', sans-serif;
+
+    body {
+        //bootstrap override
+        background-color: inherit;
+        color: inherit;
+        margin-top: 56px;
+    }
+}

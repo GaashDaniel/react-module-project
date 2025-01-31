@@ -1,0 +1,6 @@
+.modal {
+  --bs-modal-bg: var(--component-background);
+}
+.modal [type=submit]:disabled {
+  opacity: 0.4;
+}/*# sourceMappingURL=BaseModal.css.map */

@@ -1,0 +1,71 @@
+.business-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--component-background);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+.business-card img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.business-card .details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.business-card .details h2,
+.business-card .details h3 {
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.business-card .details h2 {
+  font-size: 1.75rem;
+}
+.business-card .details h3 {
+  font-size: 1.25rem;
+}
+.business-card .details address {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.business-card .details hr {
+  margin-block: 1rem;
+}
+.business-card .details .likes {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-inline-start: auto;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  background-color: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding-inline-start: 0.5lh;
+  border: none;
+  border-radius: 0;
+  border-end-start-radius: 1rem;
+}
+.business-card .details .actions {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+.business-card .details .actions .card-id {
+  display: inline-block;
+  margin-inline-end: auto;
+}
+.business-card .details .actions .btn:not(:hover) {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}/*# sourceMappingURL=BusinessCard.css.map */

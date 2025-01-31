@@ -1,0 +1,81 @@
+.business-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--component-background);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+
+    img {
+        aspect-ratio: 16/9;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        h2,
+        h3 {
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        address {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        hr {
+            margin-block: 1rem;
+        }
+
+        .likes {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-inline-start: auto;
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+            background-color: light-dark(#fff6, #0006);
+            backdrop-filter: blur(2px);
+            padding-inline-start: 0.5lh;
+            border: none;
+            border-radius: 0; // override bootstrap border-radius
+            border-end-start-radius: 1rem;
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            height: 38px;
+
+            .card-id {
+                display: inline-block;
+                margin-inline-end: auto;
+            }
+
+            .btn:not(:hover) {
+                color: inherit;
+                background-color: #0000;
+                border-color: #0000;
+            }
+        }
+    }
+}

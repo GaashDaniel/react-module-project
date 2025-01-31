@@ -1,0 +1,68 @@
+.base-flyer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    align-self: center;
+    padding: 2rem;
+    --overlay-color: light-dark(#fff9, #0009);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--background-image);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    overflow: hidden;
+
+    h1,
+    h2,
+    .description {
+        align-self: center;
+    }
+
+    .details-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        place-items: stretch;
+        gap: 2rem;
+
+        .google-map {
+            height: 360px;
+            border-radius: 1rem;
+        }
+    }
+
+    .likes {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-inline-start: auto;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: 0;
+        background-color: light-dark(#fff6, #0006);
+        backdrop-filter: blur(2px);
+        padding-inline-start: 0.5lh;
+        border: none;
+        border-radius: 0; // override bootstrap border-radius
+        border-end-start-radius: 1rem;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        height: 38px;
+
+        .card-id {
+            display: inline-block;
+            margin-inline-end: auto;
+        }
+
+        .btn:not(:hover) {
+            color: inherit;
+            background-color: #0000;
+            border-color: #0000;
+        }
+    }
+}

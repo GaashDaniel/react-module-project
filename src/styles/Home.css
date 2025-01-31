@@ -1,0 +1,11 @@
+[data-page=home] {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+[data-page=home] .container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}/*# sourceMappingURL=Home.css.map */

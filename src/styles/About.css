@@ -1,0 +1,11 @@
+[data-page=about] {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+[data-page=about] .container {
+  max-width: 800px;
+}
+[data-page=about] ul {
+  list-style: disc;
+  padding-left: 20px;
+}/*# sourceMappingURL=About.css.map */

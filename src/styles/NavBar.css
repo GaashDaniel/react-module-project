@@ -1,0 +1,16 @@
+.nav-bar-wrapper .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--optimal-page-width);
+  max-width: none;
+}
+.nav-bar-wrapper .nav-bar .navbar-brand {
+  flex-grow: 1;
+}
+.nav-bar-wrapper .nav-bar .dropdown-item {
+  padding-inline-start: 1em;
+}
+.nav-bar-wrapper input {
+  margin-inline: auto;
+}/*# sourceMappingURL=NavBar.css.map */
