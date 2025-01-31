@@ -46,7 +46,7 @@ function SearchResults({ searchQuery, user, onlyFavorites, onlyMyCards }) {
         <div className="search-results">
             {filteredBusinesses.length === 0 && <h2 className='no-businesses-found'> No businesses found</h2>}
             <div className="cards">
-                {user.loggedIn && <Link className='business-card create-business-card-button' to='#create-new-business-card'>
+                {user.loggedIn && (user.isBusiness || user.isAdmin) && <Link className='business-card create-business-card-button' to='#create-new-business-card'>
                     <FontAwesomeIcon icon={faPlus} />
                     Create New Business Card
                 </Link>}
