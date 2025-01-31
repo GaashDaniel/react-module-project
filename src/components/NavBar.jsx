@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SearchForm from "./SearchForm";
@@ -39,7 +39,7 @@ function NavBar({ user, setUser, searchQuery, setSearchQuery, searchParams, setS
             fixed="top"
         >
             <Container className="nav-bar" >
-                <NavLink className='navbar-brand' to='/' title="Go Home">EasyBusi</NavLink>
+                <Link className='navbar-brand' to='/' title="Go Home">EasyBusi</Link>
                 <UserAuthLevelIcon user={user} />
                 <ThemeSwitcher />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(!expanded)} />
@@ -53,7 +53,7 @@ function NavBar({ user, setUser, searchQuery, setSearchQuery, searchParams, setS
                             <NavLink className='dropdown-item' to={'/profile'}>Profile</NavLink>
                             {(user.isBusiness || user.isAdmin) && <NavLink className='dropdown-item' to='/my-cards'>My Cards</NavLink>}
                             <NavLink className='dropdown-item' to='/favorites'>Favorites</NavLink>
-                            <NavLink className='dropdown-item' to='/' onClick={(event) => logOut(event, setUser, navigate)}>Log Out</NavLink>
+                            <Link className='dropdown-item' to='/' onClick={(event) => logOut(event, setUser, navigate)}>Log Out</Link>
                         </NavDropdown>}
                     </Nav>
                     <SearchForm {...{ searchQuery, setSearchQuery, searchParams, setSearchParams }} />
