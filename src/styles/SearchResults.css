@@ -1,3 +1,7 @@
+.search-results h1,
+.search-results h2 {
+  text-align: center;
+}
 .search-results .no-businesses-found {
   text-align: center;
 }

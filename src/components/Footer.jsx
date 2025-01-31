@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import logOut from '../utils/logOut';
+import '../styles/Footer.css';
 
 function Footer({ user, setUser }) {
     const navigate = useNavigate();
