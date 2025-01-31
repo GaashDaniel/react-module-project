@@ -47,8 +47,8 @@ function NavBar({ user, setUser, searchQuery, setSearchQuery, searchParams, setS
                     <Nav className="me-auto">
                         <NavLink className='nav-link' to='/'>Home</NavLink>
                         <NavLink className='nav-link' to='/about'>About</NavLink>
-                        {!user.loggedIn && <NavLink className='nav-link' to='#login'>Login</NavLink>}
-                        {!user.loggedIn && <NavLink className='nav-link' to='#register'>Register</NavLink>}
+                        {!user.loggedIn && <Link className='nav-link' to='#login'>Login</Link>}
+                        {!user.loggedIn && <Link className='nav-link' to='#register'>Register</Link>}
                         {user.loggedIn && <NavDropdown title={userFirstName} id="collapsible-nav-dropdown">
                             <NavLink className='dropdown-item' to={'/profile'}>Profile</NavLink>
                             {(user.isBusiness || user.isAdmin) && <NavLink className='dropdown-item' to='/my-cards'>My Cards</NavLink>}
