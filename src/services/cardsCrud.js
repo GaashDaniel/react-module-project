@@ -1,8 +1,11 @@
 import { toast } from "react-toastify";
 
+// const origin = 'https://monkfish-app-z9uza.ondigitalocean.app/bcard2';
+const origin = 'http://localhost:3000';
+
 export async function getAllBusinesses() {
     try {
-        const response = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards`);
+        const response = await fetch(`${origin}/cards`);
         const businesses = await response.json();
         return businesses;
     } catch (error) {
@@ -14,7 +17,7 @@ export async function getAllBusinesses() {
 
 export async function getBusinessById(id) {
     try {
-        const response = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${id}`);
+        const response = await fetch(`${origin}/cards/${id}`);
         const business = await response.json();
         return business;
     } catch (error) {
@@ -26,7 +29,7 @@ export async function getBusinessById(id) {
 
 export async function patchToggleFavorite(cardId) {
     try {
-        const response = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${cardId}`, {
+        const response = await fetch(`${origin}/cards/${cardId}`, {
             method: 'PATCH',
             headers: {
                 'x-auth-token': localStorage.getItem('jwtToken'),
@@ -43,7 +46,7 @@ export async function patchToggleFavorite(cardId) {
 
 export async function createNewBusinessCard(formValues) {
     try {
-        const response = await fetch('https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards', {
+        const response = await fetch(`${origin}/cards`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +68,7 @@ export async function createNewBusinessCard(formValues) {
 
 export async function updateBusinessCard(businessId, formValues) {
     try {
-        const response = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${businessId}`, {
+        const response = await fetch(`${origin}/cards/${businessId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,7 +90,7 @@ export async function updateBusinessCard(businessId, formValues) {
 
 export async function deleteBusinessCard(businessId) {
     try {
-        const response = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${businessId}`, {
+        const response = await fetch(`${origin}/cards/${businessId}`, {
             method: 'DELETE',
             headers: {
                 'x-auth-token': localStorage.getItem('jwtToken'),

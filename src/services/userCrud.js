@@ -1,5 +1,8 @@
+// const origin = 'https://monkfish-app-z9uza.ondigitalocean.app/bcard2';
+const origin = 'http://localhost:3000';
+
 export async function getUserToken({ email, password }) {
-    const url = 'https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login';
+    const url = `${origin}/users/login`;
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -21,7 +24,7 @@ export async function getUserToken({ email, password }) {
 };
 
 export async function getUserById(userId) {
-    const url = `https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/${userId}`;
+    const url = `${origin}/users/${userId}`;
     try {
         const response = await fetch(url, {
             headers: {
@@ -41,7 +44,7 @@ export async function getUserById(userId) {
 };
 
 export async function registerUser(formValues) {
-    const url = 'https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users';
+    const url = `${origin}/users`;
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -63,7 +66,7 @@ export async function registerUser(formValues) {
 };
 
 export async function updateUser(formValues, userId) {
-    const url = `https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/${userId}`;
+    const url = `${origin}/users/${userId}`;
     try {
         const response = await fetch(url, {
             method: 'PUT',
@@ -86,7 +89,7 @@ export async function updateUser(formValues, userId) {
 };
 
 export async function deleteUser(userId) {
-    const url = `https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/${userId}`;
+    const url = `${origin}/users/${userId}`;
     try {
         const response = await fetch(url, {
             method: 'DELETE',

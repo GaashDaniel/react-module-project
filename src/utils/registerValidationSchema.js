@@ -9,7 +9,7 @@ export default Yup.object({
     phone: Yup.string().label('Phone Number').required()
         .matches(/^((\+972|0)([23489]|5[023456789])\-?\d{3}\-?\d{4})$/, 'Phone number must be valid'),
     email: Yup.string().label('Email').email().required().min(5).max(256),
-    password: Yup.string().label('Password').required().min(7).max(20)
+    password: Yup.string().label('Password').required().min(8).max(20)
         .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4,})(?=.*[!@%$#^&*\-_]).*$/,
             'Password must include uppercase, lowercase, 4 digits, and a special character'),
     confirmPassword: Yup.string().label('Confirm Password').required().oneOf([Yup.ref('password')], 'Passwords must match'),

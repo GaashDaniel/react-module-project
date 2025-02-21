@@ -44,11 +44,11 @@ function BusinessCard({ business, setBusiness, removeBusiness, user }) {
                 <hr />
                 <div className='actions'>
                     <span className='card-id'>Card Id: {business.bizNumber}</span>
-                    {user._id === business.user_id &&
+                    {(user.isAdmin || user._id === business.user_id) &&
                         <button className='btn btn-primary edit' title='Edit' onClick={() => setEditModalOpen(true)}>
                             <FontAwesomeIcon icon={faPenToSquare} />
                         </button>}
-                    {user._id === business.user_id &&
+                    {(user.isAdmin || user._id === business.user_id) &&
                         <button className='btn btn-danger delete' title='Delete' onClick={() => setConfirmModalOpen(true)}>
                             <FontAwesomeIcon icon={faTrashAlt} />
                         </button>}

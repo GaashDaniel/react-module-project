@@ -47,10 +47,10 @@ function BusinessFlyer({ user, business, setBusiness }) {
                 <GoogleMapsFrame address={address} />
             </div>
             <div className='actions'>
-                {user._id === business.user_id && <button className='btn btn-primary edit' title='Edit' onClick={() => setEditModalOpen(true)}>
+                {(user.isAdmin || user._id === business.user_id) && <button className='btn btn-primary edit' title='Edit' onClick={() => setEditModalOpen(true)}>
                     <FontAwesomeIcon icon={faPenToSquare} />
                 </button>}
-                {user._id === business.user_id && <button className='btn btn-danger delete' title='Delete' onClick={() => setConfirmModalOpen(true)}>
+                {(user.isAdmin || user._id === business.user_id) && <button className='btn btn-danger delete' title='Delete' onClick={() => setConfirmModalOpen(true)}>
                     <FontAwesomeIcon icon={faTrashAlt} />
                 </button>}
             </div>

@@ -16,7 +16,6 @@ import Favorites from './pages/Favorites';
 import Business from './pages/Business';
 import PageNotFound from './pages/PageNotFound';
 
-
 function App() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || guestUser);
 

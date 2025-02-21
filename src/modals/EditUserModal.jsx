@@ -28,7 +28,8 @@ function EditUserModal({ isOpen, onHide, user, setUser }) {
         touched,
         errors
     } = formikSchema;
-    const disabled = !formikSchema.isValid || !formikSchema.dirty;
+
+    // const disabled = !formikSchema.isValid || !formikSchema.dirty;
 
     const getNestedValue = (obj, path) => path.split('.').reduce((o, p) => o ? o[p] : '', obj);
 
@@ -99,7 +100,7 @@ function EditUserModal({ isOpen, onHide, user, setUser }) {
                         </Col>
                     ))}
                 </Row>
-                <Button type="submit" disabled={disabled}>Save Changes</Button>
+                <Button type="submit" disabled={false}>Save Changes</Button>
             </Form>
         </BaseModal>
     );
